@@ -45,7 +45,9 @@ SERIALIZERS APIS
 Instalar django rest framework 
 seguir documentación
 crear archivo serializers.py
-se crea serializer, view, ur
+se crea serializer, view, url
+
+
 
 
 
