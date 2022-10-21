@@ -20,19 +20,14 @@ from rest_framework import routers
 from rest_framework_simplejwt.views import TokenObtainPairView
 
 router = routers.DefaultRouter()
+router.register(r'users', UserViewSet)
 router.register(r'proveedores', ProveedorViewSet)
 router.register(r'productos', ProductoViewSet)
 router.register(r'departamentos', DepartamentoViewSet)
-router.register(r'users', UserViewSet)
-
-# auth_urlpatterns = [
-#     path('login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-#     path('groups/', GroupView.as_view()),
-# ]
 
 urlpatterns = [
-    path('api/', include(router.urls)),
     path('', admin.site.urls),
+    path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls')),
     path('login/', TokenObtainPairView.as_view(), name='token_obtain_pair')
 ]

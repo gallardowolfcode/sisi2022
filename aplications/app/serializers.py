@@ -1,7 +1,11 @@
 from rest_framework import serializers
 from .models import *
 
-
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        exclude = []
+        
 class ProveedorSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -19,8 +23,3 @@ class DepartamentoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Departamento
         exclude=[]
-
-class UserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        exclude = []
