@@ -4,7 +4,7 @@ from .models import *
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        exclude = []
+        exclude = ['password']
         
 class ProveedorSerializer(serializers.ModelSerializer):
 
